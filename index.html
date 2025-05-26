@@ -2,226 +2,45 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>الفرع العلمي - مكتبة البكالوريا</title>
+  <title>📚 مكتبة البكالوريا - الفرع العلمي</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary-color: #3498db;
-      --secondary-color: #2980b9;
-      --accent-color: #e74c3c;
-      --light-bg: #f8f9fa;
-      --dark-text: #2c3e50;
-      --light-text: #7f8c8d;
-      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-    
     body {
-      font-family: 'Tajawal', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-      margin: 0;
-      padding: 0;
-      color: var(--dark-text);
-      line-height: 1.6;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    h1 {
-      color: var(--secondary-color);
+      font-family: 'Arial', sans-serif;
+      background: #f7f7f7;
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      border-bottom: 2px solid var(--primary-color);
-      position: relative;
+      padding: 50px;
     }
-    
-    h1::after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      right: 50%;
-      transform: translateX(50%);
-      width: 100px;
-      height: 4px;
-      background: var(--accent-color);
+    h1 {
+      color: #2c3e50;
     }
-    
-    .section {
-      margin-bottom: 40px;
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.3s ease;
-    }
-    
-    .section:hover {
-      transform: translateY(-5px);
-    }
-    
-    .section h2 {
-      color: var(--secondary-color);
-      border-bottom: 2px dashed #eee;
-      padding-bottom: 10px;
-      font-size: 1.8rem;
-      margin-top: 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .book-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    
-    .book {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: var(--card-shadow);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border-right: 4px solid var(--primary-color);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    
-    .book::before {
-      content: "📘";
-      font-size: 1.5rem;
-    }
-    
-    .book:hover {
-      background: #f0f8ff;
-      box-shadow: var(--hover-shadow);
-      transform: translateX(-5px);
-      border-right-color: var(--accent-color);
-    }
-    
-    input[type="text"] {
-      width: 100%;
+    .nav-btn {
+      display: block;
+      width: 280px;
+      margin: 20px auto;
       padding: 15px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      border: 2px solid #ddd;
-      font-size: 1.1rem;
-      font-family: 'Tajawal', sans-serif;
-      transition: all 0.3s ease;
-      box-sizing: border-box;
-    }
-    
-    input[type="text"]:focus {
-      outline: none;
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-    }
-    
-    @media(max-width: 768px) {
-      .book-list {
-        grid-template-columns: 1fr;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .section h2 {
-        font-size: 1.5rem;
-      }
-    }
-    
-    /* تأثيرات إضافية */
-    .book:nth-child(2n) {
-      border-right-color: #2ecc71;
-    }
-    
-    .book:nth-child(3n) {
-      border-right-color: #f39c12;
-    }
-    
-    /* زر العودة لو أردت إضافته لاحقًا */
-    .back-btn {
-      display: inline-block;
-      background: var(--primary-color);
+      background-color: #3498db;
       color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
       text-decoration: none;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
+      border-radius: 10px;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
     }
-    
-    .back-btn:hover {
-      background: var(--secondary-color);
-      transform: translateY(-2px);
+    .nav-btn:hover {
+      background-color: #2980b9;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>📚 الفرع العلمي - مكتبة البكالوريا</h1>
-    <input type="text" id="searchInput" placeholder="ابحث عن كتاب...">
 
-    <div class="section">
-      <h2>📕 الكتب الأساسية</h2>
-      <div class="book-list" id="basicBooks">
-        <a class="nav-btn" href="" download>📘 كتاب الفيزياء</a>
+  <h1>📚 مكتبة البكالوريا - الفرع العلمي</h1>
 
-        <div class="book" onclick="download('books/scientific/physics.pdf')">الفيزياء - المنهج الحديث</div>
-        <div class="book" onclick="download('books/scientific/chemistry.pdf')">الكيمياء - الأسس والتطبيقات</div>
-        <div class="book" onclick="download('books/scientific/biology.pdf')">علم الأحياء - المفاهيم الأساسية</div>
-      </div>
-    </div>
+  <a class="nav-btn" href="books/scientific/physics.pdf" download>📘 كتاب الفيزياء</a>
+  <a class="nav-btn" href="books/scientific/chemistry.pdf" download>📗 كتاب الكيمياء</a>
+  <a class="nav-btn" href="books/scientific/biology.pdf" download>📙 كتاب العلوم</a>
+  <a class="nav-btn" href="books/scientific/math.pdf" download>📕 كتاب الرياضيات</a>
+  <a class="nav-btn" href="books/scientific/english.pdf" download>📒 كتاب اللغة الإنجليزية</a>
+  <a class="nav-btn" href="books/scientific/arabic.pdf" download>📓 كتاب اللغة العربية</a>
 
-    <div class="section">
-      <h2>📗 الكتب المؤتمتة</h2>
-      <div class="book-list" id="autoBooks">
-        <div class="book" onclick="download('books/scientific/automated-chemistry.pdf')">الكيمياء المؤتمتة - التجارب الافتراضية</div>
-        <div class="book" onclick="download('books/scientific/automated-physics.pdf')">معمل الفيزياء الافتراضي</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>📘 أسئلة الدورات السابقة</h2>
-      <div class="book-list" id="examBooks">
-        <div class="book" onclick="download('books/scientific/exams-math.pdf')">أسئلة رياضيات - 10 سنوات سابقة</div>
-        <div class="book" onclick="download('books/scientific/exams-physics.pdf')">نماذج فيزياء - مع الحلول</div>
-        <div class="book" onclick="download('books/scientific/exams-chemistry.pdf')">اختبارات كيمياء - دورات متنوعة</div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function download(path) {
-      window.open(path, '_blank');
-    }
-
-    // بحث حي مع تحسينات
-    document.getElementById("searchInput").addEventListener("input", function() {
-      let query = this.value.trim().toLowerCase();
-      let hasResults = false;
-      
-      document.querySelectorAll(".book").forEach(book => {
-        const matches = book.textContent.toLowerCase().includes(query);
-        book.style.display = matches ? "flex" : "none";
-        if (matches) hasResults = true;
-      });
-      
-      // يمكنك إضافة رسالة عندما لا توجد نتائج هنا لو أردت
-    });
-  </script>
 </body>
 </html>

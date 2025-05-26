@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الفرع العلمي - مكتبة البكالوريا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: 'Arial', sans-serif; background: #fff; margin: 0; padding: 20px; }
+    h1 { color: #2c3e50; text-align: center; }
+    .section { margin-bottom: 30px; }
+    .section h2 { color: #2980b9; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    .book-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .book {
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 10px;
+      width: calc(50% - 10px);
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .book:hover { background: #d0e4f7; }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    @media(max-width: 600px) {
+      .book { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 الفرع العلمي</h1>
+  <input type="text" id="searchInput" placeholder="ابحث عن كتاب...">
+
+  <div class="section">
+    <h2>📕 كتب أساسية</h2>
+    <div class="book-list" id="basicBooks">
+      <div class="book" onclick="download('books/scientific/math.pdf')">الرياضيات</div>
+      <div class="book" onclick="download('books/scientific/physics.pdf')">الفيزياء</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📗 كتب مؤتمتة</h2>
+    <div class="book-list" id="autoBooks">
+      <div class="book" onclick="download('books/scientific/automated-chemistry.pdf')">الكيمياء المؤتمتة</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📘 أسئلة دورات</h2>
+    <div class="book-list" id="examBooks">
+      <div class="book" onclick="download('books/scientific/exams-math.pdf')">أسئلة رياضيات</div>
+    </div>
+  </div>
+
+  <script>
+    function download(path) {
+      window.open(path, '_blank');
+    }
+
+    // بحث حي
+    document.getElementById("searchInput").addEventListener("input", function () {
+      let query = this.value.toLowerCase();
+      document.querySelectorAll(".book").forEach(book => {
+        book.style.display = book.textContent.toLowerCase().includes(query) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

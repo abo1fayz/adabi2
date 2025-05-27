@@ -7,28 +7,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #3498db;
-      --primary-dark: #2980b9;
-      --secondary: #2c3e50;
+      --primary: #2c3e50;
+      --primary-dark: #1a252f;
+      --secondary: #34495e;
       --accent: #e74c3c;
-      --light: #f8f9fa;
-      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      --light: #ecf0f1;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     
     body {
       font-family: 'Tajawal', 'Arial', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+      background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
       text-align: center;
       padding: 20px;
       min-height: 100vh;
       margin: 0;
+      color: #ecf0f1;
     }
     
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 30px;
-      background: white;
+      background: #34495e;
       border-radius: 15px;
       box-shadow: var(--shadow);
       position: relative;
@@ -36,13 +37,13 @@
     }
     
     h1 {
-      color: var(--secondary);
+      color: var(--light);
       font-size: 2.2rem;
       margin-bottom: 10px;
     }
     
     .section-title {
-      color: var(--secondary);
+      color: var(--light);
       font-size: 1.8rem;
       margin: 40px 0 20px;
       position: relative;
@@ -68,30 +69,32 @@
     }
     
     .book-card {
-      background: white;
+      background: #2c3e50;
       border-radius: 12px;
       padding: 20px;
       box-shadow: var(--shadow);
       transition: all 0.3s ease;
-      border: 1px solid #eee;
+      border: 1px solid #3d566e;
       text-align: center;
       position: relative;
     }
     
     .book-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      background: #3d566e;
     }
     
     .book-icon {
       font-size: 2.5rem;
       margin-bottom: 15px;
       display: block;
+      color: var(--light);
     }
     
     .book-title {
       font-weight: bold;
-      color: var(--secondary);
+      color: var(--light);
       margin-bottom: 10px;
       font-size: 1.1rem;
       min-height: 50px;
@@ -113,7 +116,7 @@
     }
     
     .download-btn:hover {
-      background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+      background: linear-gradient(135deg, var(--accent), var(--primary-dark));
       transform: scale(1.05);
     }
     
@@ -127,11 +130,11 @@
     .developers-section {
       margin-top: 60px;
       padding-top: 30px;
-      border-top: 1px dashed #ddd;
+      border-top: 1px dashed #4a6b8a;
     }
     
     .developers-title {
-      color: var(--secondary);
+      color: var(--light);
       font-size: 1.5rem;
       margin-bottom: 25px;
     }
@@ -156,7 +159,7 @@
       object-fit: cover;
       border: 3px solid var(--primary);
       padding: 3px;
-      background: white;
+      background: #2c3e50;
       box-shadow: var(--shadow);
       transition: all 0.3s;
     }
@@ -169,7 +172,7 @@
     .dev-name {
       margin-top: 10px;
       font-weight: bold;
-      color: var(--secondary);
+      color: var(--light);
     }
     
     .lead-dev .dev-name {
@@ -179,7 +182,7 @@
     
     .dev-role {
       font-size: 0.8rem;
-      color: #777;
+      color: #bdc3c7;
       margin-top: 3px;
     }
     

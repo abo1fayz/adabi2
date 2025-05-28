@@ -7,33 +7,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #2c3e50;
-      --primary-dark: #1a252f;
-      --secondary: #34495e;
-      --accent: #e74c3c;
-      --light: #ecf0f1;
-      --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      --primary: #1a1a2e;
+      --primary-dark: #0f0f1a;
+      --secondary: #16213e;
+      --accent: #e94560;
+      --light: #e6e6e6;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
     
     body {
       font-family: 'Tajawal', 'Arial', sans-serif;
-      background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+      background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
       text-align: center;
       padding: 20px;
       min-height: 100vh;
       margin: 0;
-      color: #ecf0f1;
+      color: #e6e6e6;
     }
     
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 30px;
-      background: #34495e;
+      background: #16213e;
       border-radius: 15px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+      border: 1px solid #2a2a4a;
     }
     
     h1 {
@@ -69,20 +70,20 @@
     }
     
     .book-card {
-      background: #2c3e50;
+      background: #1a1a2e;
       border-radius: 12px;
       padding: 20px;
       box-shadow: var(--shadow);
       transition: all 0.3s ease;
-      border: 1px solid #3d566e;
+      border: 1px solid #2a2a4a;
       text-align: center;
       position: relative;
     }
     
     .book-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      background: #3d566e;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      background: #2a2a4a;
     }
     
     .book-icon {
@@ -113,10 +114,11 @@
       font-size: 0.9rem;
       transition: all 0.3s;
       margin-top: 10px;
+      border: 1px solid #3d3d6e;
     }
     
     .download-btn:hover {
-      background: linear-gradient(135deg, var(--accent), var(--primary-dark));
+      background: linear-gradient(135deg, var(--accent), #c2334d);
       transform: scale(1.05);
     }
     
@@ -130,7 +132,7 @@
     .developers-section {
       margin-top: 60px;
       padding-top: 30px;
-      border-top: 1px dashed #4a6b8a;
+      border-top: 1px dashed #3d3d6e;
     }
     
     .developers-title {
@@ -159,7 +161,7 @@
       object-fit: cover;
       border: 3px solid var(--primary);
       padding: 3px;
-      background: #2c3e50;
+      background: #1a1a2e;
       box-shadow: var(--shadow);
       transition: all 0.3s;
     }
@@ -182,7 +184,7 @@
     
     .dev-role {
       font-size: 0.8rem;
-      color: #bdc3c7;
+      color: #b8b8b8;
       margin-top: 3px;
     }
     
